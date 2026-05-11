@@ -19,7 +19,7 @@ Os arquivos estão localizados dentro da estrutura de assets da versão.
 
 Visualize o componente em funcionamento através do link oficial do GitHub Pages:
 
-👉 **[CLIQUE AQUI PARA ACESSAR A DEMO](https://rodrigo-dias.github.io/menu-component/demo/)**
+👉 ** [CLIQUE AQUI PARA ACESSAR A DEMO](https://rodrigo-dias-dev.github.io/menu-component/demo/)**
 
 ---
 
