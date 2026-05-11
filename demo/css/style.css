@@ -1,0 +1,311 @@
+/* CSS Document */
+@charset "UTF-8";
+
+/* =========================
+   GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+
+    --font-primary: 'Montserrat', sans-serif;
+
+    --color-black: #0d0d0d;
+    --color-gold: #c8a45d;
+    --color-white: #ffffff;
+
+    --transition: 0.3s ease;
+
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+body {
+
+    font-family: var(--font-primary);
+    background-color: var(--color-white);
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.wrapper {
+
+    width: 100%;
+    max-width: 1200px;
+
+    background-color: var(--color-black);
+
+    position: relative;
+
+}
+
+
+/* LINHA DECORATIVA */
+
+.wrapper::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgb(234 208 157) 0%,
+            rgb(161 127 79) 70%
+        ),
+
+        linear-gradient(
+            to right,
+            transparent,
+            #816439 20%,
+            #816439 80%,
+            transparent
+        );
+
+    box-shadow: 0px 0px 10px rgba(212, 175, 55, 0.4);
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2.5rem;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+
+    width: 250px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+/* IMAGEM DA LOGO */
+
+.navbar-logo img {
+
+    width: 250px;
+    height: 80px;
+
+    object-fit: cover;
+
+   
+
+  
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.navbar-menu {
+
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    list-style: none;
+
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.navbar-link {
+
+    position: relative;
+
+    color: var(--color-white);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+
+/* UNDERLINE ANIMADO */
+
+.navbar-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: var(--color-gold);
+
+    transition: var(--transition);
+
+}
+
+
+/* HOVER E LINK ATIVO */
+
+.navbar-link:hover,
+.navbar-link.active {
+
+    color: var(--color-gold);
+
+}
+
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.navbar-toggle {
+
+    width: 40px;
+    height: 40px;
+
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   BARRAS MENU MOBILE
+========================= */
+
+.toggle-bar {
+
+    width: 30px;
+    height: 2px;
+
+    background-color: var(--color-white);
+
+    border-radius: 999px;
+
+    transition: var(--transition);
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media only screen and (max-width: 960px) {
+
+    .navbar {
+
+        padding: 0 1.5rem;
+
+    }
+
+    .navbar-logo {
+
+        width: 250px;
+        height: 80px;
+
+    }
+
+    .navbar-menu {
+
+        display: none;
+
+    }
+
+    .navbar-toggle {
+
+        display: flex;
+
+    }
+
+}
